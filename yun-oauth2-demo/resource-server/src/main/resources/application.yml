@@ -1,0 +1,10 @@
+#security:
+#  oauth2:
+#    client:
+#      access-token-uri: http://localhost:8080/oauth/token
+#      clientId: client_1
+#      clientSecret: 123456
+#      grant-type: authorization_code,password,refresh_token
+#      scope: all
+#    resource:
+#      token-info-uri: http://localhost:8080/oauth/check_token

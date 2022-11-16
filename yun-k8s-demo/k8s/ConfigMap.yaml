@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  server-snippet: |
+    location /map {
+      return 200 "this is config map"
+    }
+metadata:
+  name: ingress-nginx-controller
+  namespace: ingress-nginx

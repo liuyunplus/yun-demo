@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-server
+  template:
+    metadata:
+      labels:
+        app: node-server
+    spec:
+      containers:
+        - name: node-server
+          image: liuyunplus/node-server:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

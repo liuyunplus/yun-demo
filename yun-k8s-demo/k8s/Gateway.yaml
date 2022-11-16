@@ -1,0 +1,33 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: node-server-gateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: node-server-vs
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - node-server-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /test
+      route:
+        - destination:
+            host: node-server-svc
+            port:
+              number: 8080
