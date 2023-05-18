@@ -1,3 +1,5 @@
+package com.liuyun.github.utils;
+
 public class Constants {
 
     public static final char EPSILON = 'E';

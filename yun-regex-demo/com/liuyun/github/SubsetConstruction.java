@@ -1,3 +1,9 @@
+package com.liuyun.github;
+
+import com.liuyun.github.model.DFA;
+import com.liuyun.github.model.NFA;
+import com.liuyun.github.model.Transition;
+import com.liuyun.github.utils.Constants;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
